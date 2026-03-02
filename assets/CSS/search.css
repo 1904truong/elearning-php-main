@@ -1,0 +1,401 @@
+/* ================== COURSES PAGE ================== */
+
+.courses-page {
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+    background: #f5f7ff;
+    min-height: 100vh;
+}
+
+/* HERO + SEARCH BAR */
+.courses-page .hero {
+    padding: 60px 0 30px;
+    background:
+        linear-gradient(135deg, rgba(16, 19, 50, 0.85), rgba(0, 198, 215, 0.6)),
+        url("https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1600")
+            center/cover no-repeat;
+    color: #fff;
+}
+
+.courses-page .search-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.courses-page .search-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1.5fr) minmax(0, 1.5fr) auto;
+    gap: 14px;
+    background: #111827;
+    padding: 12px 14px;
+    border-radius: 999px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+.courses-page .search-bar .input {
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    font-size: 14px;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+.courses-page .search-bar .input::placeholder {
+    color: #9ca3af;
+}
+
+.courses-page .search-bar select.input {
+    cursor: pointer;
+}
+
+.courses-page .btn-primary {
+    padding: 10px 32px;
+    border-radius: 999px;
+    border: none;
+    background: #00c6d7;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.courses-page .btn-primary:hover {
+    background: #01a7d2;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.courses-page .filters-info {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #e5e7eb;
+}
+
+/* MAIN SECTION */
+.courses-page .section {
+    max-width: 1100px;
+    margin: 26px auto 40px;
+    padding: 0 16px;
+}
+
+/* GRID CARD */
+.courses-page .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.courses-page .card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.courses-page .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.25);
+}
+
+/* THUMB */
+.courses-page .thumb {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.courses-page .thumb img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.courses-page .card:hover .thumb img {
+    transform: scale(1.04);
+}
+
+.courses-page .badges {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    gap: 6px;
+}
+
+.courses-page .badge {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+}
+
+/* BODY */
+.courses-page .body {
+    padding: 14px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.courses-page .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.courses-page .title:hover {
+    color: #00a5c4;
+}
+
+.courses-page .desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+
+/* FOOT: AUTHOR + PRICE */
+.courses-page .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.courses-page .author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.courses-page .author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.courses-page .author span {
+    font-size: 13px;
+    color: #111827;
+}
+
+.courses-page .price-block {
+    text-align: right;
+}
+
+.courses-page .price-block .old {
+    font-size: 12px;
+    color: #9ca3af;
+    text-decoration: line-through;
+    display: block;
+}
+
+.courses-page .price-block .price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f97316;
+}
+
+/* ACTIONS (DETAIL + ADD TO CART) */
+.courses-page .card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.courses-page .btn-outline-sm,
+.courses-page .btn-primary-sm {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+    font-size: 13px;
+    border-radius: 999px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+.courses-page .btn-outline-sm {
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #111827;
+}
+
+.courses-page .btn-outline-sm:hover {
+    background: #f3f4ff;
+}
+
+.courses-page .btn-primary-sm {
+    border: none;
+    background: #00c6d7;
+    color: #ffffff;
+    font-weight: 500;
+    gap: 6px;
+}
+
+.courses-page .btn-primary-sm:hover {
+    background: #01a7d2;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 198, 215, 0.4);
+}
+
+/* BANNER CUỐI TRANG */
+.courses-page .banner {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 22px 18px;
+    border-radius: 24px;
+    background: radial-gradient(circle at top left, #00c6d7, #111827);
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 2fr 1.3fr;
+    gap: 18px;
+    align-items: center;
+}
+
+.courses-page .banner h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.courses-page .b-list {
+    display: grid;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.courses-page .b-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.courses-page .b-item .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #facc15;
+}
+
+.courses-page .b-cta {
+    margin-top: 12px;
+}
+
+.courses-page .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: none;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.courses-page .btn-cta:hover {
+    background: #e5e7eb;
+}
+
+/* MOCK BUBBLES (TRANG TRÍ) */
+.courses-page .mock {
+    position: relative;
+    height: 130px;
+}
+
+.courses-page .mock .bubble {
+    position: absolute;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.15);
+}
+
+.courses-page .mock .bubble:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 8px;
+    right: 0;
+}
+
+.courses-page .mock .bubble:nth-child(2) {
+    width: 46px;
+    height: 46px;
+    bottom: 10px;
+    right: 40px;
+}
+
+.courses-page .mock .bubble:nth-child(3) {
+    width: 28px;
+    height: 28px;
+    bottom: 26px;
+    right: 0;
+}
+
+.courses-page .mock .bubble:nth-child(4),
+.courses-page .mock .bubble:nth-child(5),
+.courses-page .mock .bubble:nth-child(6) {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .courses-page .search-bar {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        border-radius: 20px;
+    }
+
+    .courses-page .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .courses-page .banner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-page .hero {
+        padding: 40px 0 24px;
+    }
+
+    .courses-page .search-bar {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+        background: rgba(15, 23, 42, 0.96);
+    }
+
+    .courses-page .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-page .thumb img {
+        height: 200px;
+    }
+}
